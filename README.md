@@ -1,30 +1,48 @@
 # Weeder - Trabajo Realizado por Alcibiades Oyarzun
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En Auth0 resgitrarse y crear una aplicación y una API
+en la Aplicación los parametros de Allowed Callback URLs, Allowed Logout URLs y Allowed Web Origins deben llevar el parametro: http://localhost:5173, https://[TU DIRECCIÓN DE RENDER O NETLIFY]
+En la API el Identifier es parametro para AUDIENCE
 
-Currently, two official plugins are available:
+# Variables de Entorno para Backend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## LOS SIGUIENTES VALORES SON ESPACIOS RESERVADOS COMO EJEMPLO. PARA USAR:
 
-## Expanding the ESLint configuration
+## - copia este archivo y renómbralo como .env
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## - llena los espacios reservados con los valores apropiados para cada servicio después de registrarte
 
-- Configure the top-level `parserOptions` property like this:
+# Cadena de conexión para MongoDB
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+MONGODB_CONNECTION_STRING=mongodb+srv://xxx:xxx@xxx.mongodb.net/?retryWrites=true&w=majority
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Configuración de Auth0
+
+AUTH0_AUDIENCE=xxx-xxxx-api # El identificador del público (audiencia) de Auth0
+AUTH0_ISSUER_BASE_URL=https://xxx.us.auth0.com/ # URL base del emisor de Auth0
+
+# Configuración de Cloudinary
+
+CLOUDINARY_CLOUD_NAME=dr55xxx # Nombre del Cloud en Cloudinary
+CLOUDINARY_API_KEY=14122xxx # Clave de API de Cloudinary
+CLOUDINARY_API_SECRET=h3iPa_nR-xxx # Secreto de API de Cloudinary
+
+# Configuración de Stripe
+
+FRONTEND_URL=http://localhost:5173 # URL del frontend para Stripe
+STRIPE_API_KEY=sk_test_xxx # Clave de API de Stripe (modo prueba)
+STRIPE_WEBHOOK_SECRET=whsec_xxx # Secreto del webhook de Stripe
+
+# Variables de Entorno para Frontend
+
+## LOS SIGUIENTES VALORES SON MARCAS DE LUGAR DESTINADAS COMO EJEMPLO. PARA USAR:
+
+## - copia este archivo y renómbralo a .env
+
+## - completa los valores de los marcadores de lugar con los valores apropiados para el servicio dado después de registrarte
+
+VITE_API_BASE_URL=http://localhost:7000
+VITE_AUTH0_DOMAIN=dev-xxx.us.auth0.com
+VITE_AUTH0_CLIENT_ID=Cn88qxxx
+VITE_AUTH0_CALLBACK_URL=http://localhost:5173
+VITE_AUTH0_AUDIENCE=xx-xxxx-xxx-api
