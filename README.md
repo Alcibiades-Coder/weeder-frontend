@@ -8,9 +8,9 @@ En la API el Identifier es parametro para AUDIENCE
 
 ## LOS SIGUIENTES VALORES SON ESPACIOS RESERVADOS COMO EJEMPLO. PARA USAR:
 
-## - copia este archivo y renómbralo como .env
+- Copia este archivo y renómbralo como .env
 
-## - llena los espacios reservados con los valores apropiados para cada servicio después de registrarte
+- Llena los espacios reservados con los valores apropiados para cada servicio después de registrarte
 
 # Cadena de conexión para MongoDB
 
@@ -37,12 +37,16 @@ STRIPE_WEBHOOK_SECRET=whsec_xxx # Secreto del webhook de Stripe
 
 ## LOS SIGUIENTES VALORES SON MARCAS DE LUGAR DESTINADAS COMO EJEMPLO. PARA USAR:
 
-## - copia este archivo y renómbralo a .env
+- Copia este archivo y renómbralo a .env
 
-## - completa los valores de los marcadores de lugar con los valores apropiados para el servicio dado después de registrarte
+- Completa los valores de los marcadores de lugar con los valores apropiados para el servicio dado después de registrarte
 
 VITE_API_BASE_URL=http://localhost:7000
 VITE_AUTH0_DOMAIN=dev-xxx.us.auth0.com
 VITE_AUTH0_CLIENT_ID=Cn88qxxx
 VITE_AUTH0_CALLBACK_URL=http://localhost:5173
 VITE_AUTH0_AUDIENCE=xx-xxxx-xxx-api
+
+-Recuerda que las variables de entorno con valores : http://localhost:7000 y http://localhost:5173 por https://[TU DIRECCION DE BACKEND EN RENDER O NETLIFY] y https://[TU DIRECCION DE FRONTEND EN RENDER O NETLIFY] respectivamente.
+
+Trabajo realizado por Alcibiades Oyarzún
