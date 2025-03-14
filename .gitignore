@@ -1,0 +1,27 @@
+# Logs
+# Excluye los archivos de registro generados durante la ejecución del proyecto.
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Excluye las dependencias del proyecto y los archivos generados en las construcciones
+node_modules
+dist
+dist-ssr
+*.local
+
+# Archivos y directorios relacionados con editores de código
+# Excluye configuraciones de editores y archivos específicos de IDEs
+.vscode/*
+!.vscode/extensions.json  # Mantiene el archivo de configuraciones de extensiones de VSCode
+.idea
+.DS_Store  # Archivo generado por macOS para metadatos
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?  # Archivos temporales de editores como Visual Studio

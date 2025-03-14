@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // Habilitar la opción de proyectos compuestos (útil para proyectos más grandes y modulares)
+    "composite": true,
+
+    // Saltarse la comprobación de tipos en las bibliotecas para evitar errores en bibliotecas externas
+    "skipLibCheck": true,
+
+    // Usar el sistema de módulos más reciente (ESNext)
+    "module": "ESNext", // Esto permite usar las características más modernas de ESModules
+
+    // Modo de resolución de módulos del bundler
+    "moduleResolution": "bundler", // Usar el modo de resolución de módulos compatible con bundlers (como Vite)
+
+    // Permitir importaciones sintéticas de módulos por defecto
+    "allowSyntheticDefaultImports": true // Permite importar módulos sin exportación por defecto como si tuvieran una exportación por defecto
+  },
+
+  // Archivos a incluir en el proyecto
+  "include": ["vite.config.ts"] // Incluir solo el archivo de configuración de Vite
+}

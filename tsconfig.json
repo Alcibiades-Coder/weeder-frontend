@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    // Ruta base para las importaciones relativas
+    "baseUrl": ".",
+
+    // Configuración de rutas de importación
+    "paths": {
+      "@/*": ["./src/*"] // Las rutas que comienzan con '@/' se resuelven dentro de la carpeta 'src'
+    },
+
+    // Objetivo de compatibilidad con la versión de ECMAScript
+    "target": "ES2020", // El código generado será compatible con ES2020
+
+    // Usar la nueva definición de campos de clase en lugar de las antiguas
+    "useDefineForClassFields": true,
+
+    // Bibliotecas adicionales a incluir
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Se incluyen las bibliotecas ES2020, DOM y DOM.Iterable
+
+    // Módulo a utilizar
+    "module": "ESNext", // Se usa el sistema de módulos más reciente (ESNext)
+
+    // Saltarse la comprobación de bibliotecas (útil para evitar errores en bibliotecas externas)
+    "skipLibCheck": true,
+
+    /* Modo de resolución de módulos */
+    "moduleResolution": "bundler", // Utiliza el modo de resolución de módulos del bundler
+
+    // Permitir importar archivos TypeScript con extensiones
+    "allowImportingTsExtensions": true,
+
+    // Permitir la importación de módulos JSON
+    "resolveJsonModule": true,
+
+    // Aislar módulos (para evitar efectos secundarios entre ellos)
+    "isolatedModules": true,
+
+    // No emitir archivos de salida (solo realiza la comprobación de tipos)
+    "noEmit": true,
+
+    // Configuración de JSX para React
+    "jsx": "react-jsx", // Usar el nuevo transformador JSX de React 17+
+
+    /* Linting */
+    "strict": true, // Activar todas las comprobaciones estrictas de tipos
+    "noUnusedLocals": true, // Reportar locales no utilizados
+    "noUnusedParameters": true, // Reportar parámetros no utilizados
+    "noFallthroughCasesInSwitch": true // Evitar casos de caída en las estructuras 'switch'
+  },
+
+  // Archivos a incluir en el proyecto
+  "include": ["src"], // Incluir todos los archivos dentro de la carpeta 'src'
+
+  // Referencias a otros archivos de configuración
+  "references": [{ "path": "./tsconfig.node.json" }] // Referencia al archivo de configuración de Node.js
+}

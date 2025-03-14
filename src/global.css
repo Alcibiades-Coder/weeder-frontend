@@ -1,0 +1,88 @@
+/* Importar las directivas de Tailwind para las capas base, componentes y utilidades */
+@tailwind base; /* Aplica las reglas base predeterminadas de Tailwind */
+@tailwind components; /* Aplica los componentes predefinidos de Tailwind */
+@tailwind utilities; /* Aplica las utilidades de Tailwind */
+
+/* Definir estilos personalizados en la capa base */
+@layer base {
+  :root {
+    /* Definir variables de color para el modo claro */
+    --background: 0 0% 100%; /* Color de fondo principal */
+    --foreground: 222.2 84% 4.9%; /* Color de texto principal */
+
+    /* Estilos de tarjeta */
+    --card: 0 0% 100%; /* Fondo de tarjeta */
+    --card-foreground: 222.2 84% 4.9%; /* Color de texto en la tarjeta */
+
+    /* Estilos de popover (ventanas emergentes) */
+    --popover: 0 0% 100%; /* Fondo del popover */
+    --popover-foreground: 222.2 84% 4.9%; /* Color de texto del popover */
+
+    /* Colores principales y secundarios */
+    --primary: 222.2 47.4% 11.2%; /* Color primario */
+    --primary-foreground: 210 40% 98%; /* Color de texto sobre el color primario */
+
+    --secondary: 210 40% 96.1%; /* Color secundario */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Color de texto sobre el color secundario */
+
+    --muted: 210 40% 96.1%; /* Color atenuado */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Color de texto atenuado */
+
+    --accent: 210 40% 96.1%; /* Color de acento */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Color de texto sobre el color de acento */
+
+    --destructive: 0 84.2% 60.2%; /* Color destructivo (por ejemplo, botones de eliminar) */
+    --destructive-foreground: 210 40% 98%; /* Color de texto para elementos destructivos */
+
+    /* Colores de bordes, entradas y anillos de enfoque */
+    --border: 214.3 31.8% 91.4%; /* Color de borde */
+    --input: 214.3 31.8% 91.4%; /* Color de fondo de entradas */
+    --ring: 222.2 84% 4.9%; /* Color del anillo de enfoque */
+
+    /* Radio de las esquinas */
+    --radius: 0.5rem; /* Radio para bordes redondeados */
+  }
+
+  /* Estilos personalizados para el modo oscuro */
+  .dark {
+    /* Definir colores para el modo oscuro */
+    --background: 222.2 84% 4.9%; /* Fondo oscuro */
+    --foreground: 210 40% 98%; /* Texto claro en modo oscuro */
+
+    --card: 222.2 84% 4.9%; /* Fondo oscuro para tarjeta */
+    --card-foreground: 210 40% 98%; /* Texto claro en la tarjeta en modo oscuro */
+
+    --popover: 222.2 84% 4.9%; /* Fondo oscuro para popover */
+    --popover-foreground: 210 40% 98%; /* Texto claro en el popover en modo oscuro */
+
+    --primary: 210 40% 98%; /* Color primario claro en modo oscuro */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Texto oscuro sobre el color primario */
+
+    --secondary: 217.2 32.6% 17.5%; /* Color secundario oscuro */
+    --secondary-foreground: 210 40% 98%; /* Texto claro sobre el color secundario */
+
+    --muted: 217.2 32.6% 17.5%; /* Color atenuado oscuro */
+    --muted-foreground: 215 20.2% 65.1%; /* Texto claro sobre el color atenuado */
+
+    --accent: 217.2 32.6% 17.5%; /* Color de acento oscuro */
+    --accent-foreground: 210 40% 98%; /* Texto claro sobre el color de acento */
+
+    --destructive: 0 62.8% 30.6%; /* Color destructivo en modo oscuro */
+    --destructive-foreground: 210 40% 98%; /* Texto claro sobre el color destructivo */
+
+    --border: 217.2 32.6% 17.5%; /* Color de borde oscuro */
+    --input: 217.2 32.6% 17.5%; /* Color de entrada en modo oscuro */
+    --ring: 212.7 26.8% 83.9%; /* Anillo de enfoque en modo oscuro */
+  }
+}
+
+/* Aplicar reglas base generales */
+@layer base {
+  * {
+    @apply border-border; /* Aplicar borde global */
+  }
+
+  body {
+    @apply bg-background text-foreground; /* Aplicar fondo y texto global */
+  }
+}
